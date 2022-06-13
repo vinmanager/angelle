@@ -19,3 +19,5 @@ make -j8
 make install
 
 popd
+
+rm -rf ${BUILD_DIR}
