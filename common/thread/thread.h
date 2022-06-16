@@ -9,6 +9,7 @@
 #include <thread>  // NOLINT
 #include <mutex>  // NOLINT
 #include <condition_variable>  // NOLINT
+#include <utility>
 
 namespace mngr {
 
@@ -26,9 +27,14 @@ class Thread {
   * @param name
   * @param act
   */
-  Thread(std::string name = "Thread", Action act = Action::kDetach);  // NOLINT
-  Thread(Action act);  // NOLINT
+  explicit Thread(std::string name = "Thread", Action act = Action::kDetach);
+  explicit Thread(Action act);
   Thread(Thread&& thrd);
+
+  template<typename Callable, typename ... Args>
+  explicit Thread(Callable&& func, Args&& ... args)
+    : thread_(std::forward<Callable>(func), std::forward<Args>(args)...) {
+  }
 
   /**
    * @brief Destroy the Thread object
