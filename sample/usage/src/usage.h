@@ -4,13 +4,15 @@
  *Date: 2022-06-13
  *****************************************************************************/
 
-#include "testaddmodule.h"
+#pragma once
 
+namespace mngr {
 
-testaddmodule::testaddmodule(/* args */)
-{
-}
+class Usage {
+ public:
+  Usage();
+  ~Usage();
+  void Show();
+};
 
-testaddmodule::~testaddmodule()
-{
-}
+}  // namespace mngr

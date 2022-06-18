@@ -1,3 +1,4 @@
 [submodule "extproj/cpp-tools"]
 	path = extproj/cpp-tools
 	url = git@github.com:vinmanager/cpp-tools.git
+	branch = main

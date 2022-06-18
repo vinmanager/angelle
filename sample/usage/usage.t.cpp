@@ -1,13 +1,16 @@
 /******************************************************************************
  Copyright (C) 2022 Vin Manager All rights reserved
  *Author: vin manager
- *Date: 2022-06-13
+ *Date: 2022-06-18
  *****************************************************************************/
 
-#pragma once
+#include <gtest/gtest.h>
 
-class testaddmodule {
- public:
-  testaddmodule(/* args */);
-  ~testaddmodule();
-};
+TEST(thread, one) {
+  return;
+}
+
+int main(int argc, char** argv) {
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

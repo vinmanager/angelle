@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.12.1)
-project(sample_test)
+
+project(angelle)
 
 include(cmake/build.cmake)
 
-# add_module(common)
-
-add_module(package)
+add_module(sample)

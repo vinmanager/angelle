@@ -4,10 +4,13 @@
  *Date: 2022-06-13
  *****************************************************************************/
 
-#include "src/testaddmodule.h"
+#include "src/usage.h"
 #include <iostream>
 
 int main(int argc, const char** argv) {
+  mngr::Usage usage;
+  usage.Show();
+
   std::cout << "hello world !" << std::endl;
   return 0;
 }

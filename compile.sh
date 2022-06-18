@@ -12,8 +12,8 @@ fi
 
 RELEASE_PATH=${PROJECT_ROOT}/release
 
-git submodule update --init
-git submodule update --remote
+# git submodule update --init
+# git submodule update --remote
 
 pushd ${BUILD_DIR}
 
@@ -24,3 +24,5 @@ make install
 popd
 
 rm -rf ${BUILD_DIR}
+
+export LD_LIBRARY_PATH=${PROJECT_ROOT}/3rdparty/gtest/libs:$LD_LIBRARY_PATH
