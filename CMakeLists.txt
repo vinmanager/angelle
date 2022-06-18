@@ -3,6 +3,6 @@ project(sample_test)
 
 include(cmake/build.cmake)
 
-add_module(common)
+# add_module(common)
 
 add_module(package)

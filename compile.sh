@@ -12,6 +12,9 @@ fi
 
 RELEASE_PATH=${PROJECT_ROOT}/release
 
+git submodule update --init
+git submodule update --remote
+
 pushd ${BUILD_DIR}
 
 cmake -DCMAKE_INSTALL_PREFIX=${RELEASE_PATH} ..
